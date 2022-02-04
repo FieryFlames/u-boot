@@ -4,6 +4,15 @@ choice
 	prompt "EXYNOS architecture type select"
 	optional
 
+config ARCH_EXYNOS3
+	bool "Exynos3 SoC family"
+	select CPU_V7A
+	select BLK
+	select DM_MMC
+	help
+	  Samsung Exynos3 SoC family are based on ARM Cortex-A7 CPU. There
+	  are multiple SoCs in this family including Exynos3475.
+
 config ARCH_EXYNOS4
 	bool "Exynos4 SoC family"
 	select BOARD_EARLY_INIT_F

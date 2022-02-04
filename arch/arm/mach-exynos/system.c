@@ -65,6 +65,6 @@ void set_system_display_ctrl(void)
 {
 	if (cpu_is_exynos4())
 		exynos4_set_system_display();
-	else
+	else if (cpu_is_exynos5())
 		exynos5_set_system_display();
 }
