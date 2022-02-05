@@ -1,0 +1,5 @@
+XCOVER3VE Board
+M:	Ivaylo Ivanov <ivo.ivanov.ivanov1@gmail.com>
+S:	Maintained
+F:	board/samsung/xcover3ve/
+F:	include/configs/xcover3ve.h

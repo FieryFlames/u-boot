@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Samsung's Exynos3 SoC common device tree source
+ *
+ * Copyright (c) 2022, Ivaylo Ivanov <ivo.ivanov.ivanov1@gmail.com>
+ */
+
+#include "skeleton.dtsi"
+
+/ {
+	gic: interrupt-controller@10c00000 {
+		compatible = "arm,cortex-a7-gic";
+		#interrupt-cells = <3>;
+		interrupt-controller;
+		cpu-offset = <0x4000>;
+		reg = <0x10c01000 0x1000>, <0x10c02000 0x1000>,
+		      <0x10c04000 0x2000>, <0x10c06000 0x2000>;
+	};
+};

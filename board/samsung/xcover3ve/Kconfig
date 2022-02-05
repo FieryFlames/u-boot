@@ -1,0 +1,14 @@
+if TARGET_XCOVER3VE
+
+config SYS_BOARD
+	default "xcover3ve"
+	help
+	  Xcover3ve is a production board for SM-G389F phone on Exynos3475 SoC.
+
+config SYS_VENDOR
+	default "samsung"
+
+config SYS_CONFIG_NAME
+	default "xcover3ve"
+
+endif

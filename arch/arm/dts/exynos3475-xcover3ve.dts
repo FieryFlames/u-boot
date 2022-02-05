@@ -1,0 +1,13 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Samsung's Exynos4 SoC common device tree source
+ *
+ * Copyright (c) 2022, Ivaylo Ivanov <ivo.ivanov.ivanov1@gmail.com>
+ */
+
+/dts-v1/;
+#include "exynos3.dtsi"
+/ {
+	model = "Samsung UNIVERSAL3475 board based on EXYNOS3475";
+	compatible = "samsung,UNIVERSAL3475", "samsung,exynos3475";
+};
