@@ -1,0 +1,141 @@
+/ {
+	/* ALIVE */
+	gpio@139B0000 {
+		gpa0: gpa0 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+        gpa1: gpa1 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+        gpq0: gpq0 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+	};
+
+	/* AUD */
+	gpio@148F0000 {
+		gpz0: gpz0 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpz1: gpz1 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+	};
+
+	/* ESE */
+	gpio@138E0000 {
+		gpc4: gpc4 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+	};
+
+	/* FSYS */
+	gpio@13750000 {
+		gpr0: gpr0 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpr1: gpr1 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpr2: gpr2 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpr3: gpr3 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpr4: gpr4 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+	};
+
+    /* MIF */
+	gpio@104E0000 {
+		gpm0: gpm0 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+	};
+
+    /* NFC */
+	gpio@138C0000 {
+		gpc2: gpc2 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+	};
+
+	/* TOP */
+	gpio@139C0000 {
+		gpb0: gpb0 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+        gpb1: gpb1 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+
+		gpc0: gpc0 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpc1: gpc1 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpd1: gpd1 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpd2: gpd2 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpe0: gpe0 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpf0: gpf0 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+
+		gpf1: gpf1 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+	};
+
+    /* TOUCH */
+	gpio@138D0000 {
+		gpc3: gpc3 {
+			gpio-controller;
+			#gpio-cells = <2>;
+		};
+	};
+};

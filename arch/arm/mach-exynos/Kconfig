@@ -58,6 +58,14 @@ config ARCH_EXYNOS7
 	  Cortex-A53 CPU (and some in a big.LITTLE configuration). There are
 	  multiple SoCs in this family including Exynos7420.
 
+config ARCH_EXYNOS3
+	bool "Exynos3 SoC family"
+	select CPU_V7A
+	select BLK
+	select DM_SERIAL
+	help 
+	  Samsung Exynos3 SoC family are based on ARM Cortex-A7 CPU. There
+	  are multiple SoCs in this family including Exynos3475.
 endchoice
 
 if ARCH_EXYNOS4
@@ -228,6 +236,19 @@ config  TARGET_A3Y17LTE
 endchoice
 endif
 
+if ARCH_EXYNOS3
+
+choice
+	prompt "EXYNOS3 board select"
+
+config TARGET_ON5LTETMO
+	bool "SM-G550T board"
+	select OF_CONTROL
+	select SUPPORT_SPL
+
+endchoice
+endif
+
 config SYS_SOC
 	default "exynos"
 
@@ -252,5 +273,6 @@ source "board/samsung/smdk5250/Kconfig"
 source "board/samsung/smdk5420/Kconfig"
 source "board/samsung/espresso7420/Kconfig"
 source "board/samsung/axy17lte/Kconfig"
+source "board/samsung/on5ltetmo/Kconfig"
 
 endif

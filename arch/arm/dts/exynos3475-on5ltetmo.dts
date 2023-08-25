@@ -1,0 +1,25 @@
+/dts-v1/;
+
+#include "exynos3475.dtsi"
+
+/ {
+	model = "Samsung Galaxy On5 (T-Mobile)";
+	compatible = "samsung,on5ltetmo", "samsung,exynos3475";
+	model_info-chip = <3475>;
+	model_info-platform = "android";
+	model_info-subtype = "samsung";
+	model_info-hw_rev = <5>;
+	model_info-hw_rev_end = <255>;
+
+	aliases {
+		console = &uart2;
+	};
+
+	chosen {
+		stdout-path = &uart2;
+	};
+};
+
+&fin_pll {
+	clock-frequency = <26000000>;
+};

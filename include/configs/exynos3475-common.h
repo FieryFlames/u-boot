@@ -1,0 +1,35 @@
+#ifndef __CONFIG_EXYNOS3475_COMMON_H
+#define __CONFIG_EXYNOS3475_COMMON_H
+
+#include "exynos-common.h"
+//#include <asm/arch/cpu.h>		/* get chip and board defs */
+//#include <linux/sizes.h>
+
+/* Miscellaneous configurable options */
+#define CFG_SYS_SDRAM_BASE		0x20000000
+/* DRAM Memory Banks */
+#define SDRAM_BANK_SIZE		(256UL << 20UL)	/* 256 MB */
+
+#define CONFIG_NR_DRAM_BANKS		6
+
+#define PHYS_SDRAM_1		CFG_SYS_SDRAM_BASE
+#define PHYS_SDRAM_1_SIZE	SDRAM_BANK_SIZE
+#define PHYS_SDRAM_2		(CFG_SYS_SDRAM_BASE + SDRAM_BANK_SIZE)
+#define PHYS_SDRAM_2_SIZE	SDRAM_BANK_SIZE
+#define PHYS_SDRAM_3		(CFG_SYS_SDRAM_BASE + (2 * SDRAM_BANK_SIZE))
+#define PHYS_SDRAM_3_SIZE	SDRAM_BANK_SIZE
+#define PHYS_SDRAM_4		(CFG_SYS_SDRAM_BASE + (3 * SDRAM_BANK_SIZE))
+#define PHYS_SDRAM_4_SIZE	SDRAM_BANK_SIZE
+#define PHYS_SDRAM_5		(CFG_SYS_SDRAM_BASE + (4 * SDRAM_BANK_SIZE))
+#define PHYS_SDRAM_5_SIZE	SDRAM_BANK_SIZE
+#define PHYS_SDRAM_6		(CFG_SYS_SDRAM_BASE + (5 * SDRAM_BANK_SIZE))
+#define PHYS_SDRAM_6_SIZE	SDRAM_BANK_SIZE
+
+#ifndef EXYNOS_FDTFILE_SETTING
+#define EXYNOS_FDTFILE_SETTING
+#endif
+
+#define CFG_EXTRA_ENV_SETTINGS \
+	EXYNOS_FDTFILE_SETTING \
+
+#endif	/* __CONFIG_EXYNOS3475_COMMON_H */

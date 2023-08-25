@@ -1,0 +1,39 @@
+/dts-v1/;
+#include "skeleton.dtsi"
+#include "exynos3475-pinctrl.dtsi"
+//#include "exynos3475-gpio.dtsi"
+
+/ {
+	compatible = "samsung,exynos3475";
+	
+	fin_pll: xxti {
+		compatible = "fixed-clock";
+		clock-output-names = "fin_pll";
+		bootph-all;
+		#clock-cells = <0>;
+	};
+
+	/* Dummy clock for uart */
+	fin_uart: uart_dummy_fin {
+		compatible = "fixed-clock";
+		clock-output-names = "fin_uart";
+		clock-frequency = <132710400>;
+		bootph-all;
+		#clock-cells = <0>;
+	};
+
+	uart2: serial@13820000 {
+		compatible = "samsung,exynos4210-uart";
+		reg = <0x13820000 0x100>;
+		bootph-all;
+		clocks = <&fin_uart>, <&fin_uart>; // driver uses 1st clock
+		clock-names = "uart", "clk_uart_baud0";
+		pinctrl-names = "default";
+		pinctrl-0 = <&uart2_bus>;
+	};
+
+	pinctrl@139C0000 {
+		compatible = "samsung,exynos3475-pinctrl";
+		reg = <0x139C0000 0x1000>;
+	};
+};

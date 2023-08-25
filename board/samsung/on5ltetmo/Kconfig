@@ -1,0 +1,12 @@
+if TARGET_ON5LTETMO
+
+config SYS_BOARD
+	default "on5ltetmo"
+
+config SYS_VENDOR
+	default "samsung"
+
+config SYS_CONFIG_NAME
+	default "on5ltetmo"
+
+endif
